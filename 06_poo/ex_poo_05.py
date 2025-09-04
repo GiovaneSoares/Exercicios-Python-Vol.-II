@@ -40,8 +40,6 @@ class Produto:
 produto_1 = Produto(nome="Camiseta", preco=29.99, estoque=50)
 produto_2 = Produto(nome="Boné", preco=50.50, estoque=5)
 
-# print(produto_1.descricao())
-# print(produto_2.descricao())
 produto_1.aumentar_estoque(20)
 produto_1.diminuir_estoque(5)
 print(produto_1.descricao())

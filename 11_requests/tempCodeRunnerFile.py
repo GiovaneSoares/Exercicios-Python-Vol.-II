@@ -1,12 +1,3 @@
-"""Exercício 02.
-
-Crie uma função chamada consultar_cep que recebe um CEP como argumento e consulta
-informações sobre esse CEP utilizando a API do ViaCEP (viacep.com.br).
-A função deve imprimir os detalhes do endereço correspondente ao CEP fornecido.
-Se o CEP não for encontrado, deve imprimir uma mensagem informando que o CEP não foi
-encontrado.
-"""
-
 from typing import TYPE_CHECKING
 
 import requests
@@ -30,13 +21,14 @@ def consultar_cep(cep: str) -> None:
     if "erro" in data:
         print("CEP não encontrado.")
     else:
-        print("\nEndereço encontrado!")
-        print(f"CEP: {data['cep']}")
+        print("\nCEP encontrado!")
+        print(f"CEP: {data['uf']}")
         print(f"Logradouro: {data['logradouro']}")
         print(f"Complemento: {data['complemento']}")
         print(f"Bairro: {data['bairro']}")
         print(f"Cidade: {data['localidade']}")
         print(f"Estado: {data['estado']}")
+
 
 cep: str = input("Digite o CEP para consulta: ")
 try:
@@ -47,3 +39,4 @@ except requests.exceptions.ConnectTimeout:
     print("Erro: Tempo esgotado.")
 except requests.exceptions.RequestException as e:
     print(f"Erro: {e}")
+
