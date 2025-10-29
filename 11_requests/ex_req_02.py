@@ -14,7 +14,6 @@ import requests
 if TYPE_CHECKING:
     from requests import Response
 
-
 def consultar_cep(cep: str) -> None:
     url: str = f"https://viacep.com.br/ws/{cep}/json/"
 

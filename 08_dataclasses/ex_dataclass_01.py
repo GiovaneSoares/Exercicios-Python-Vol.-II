@@ -10,13 +10,11 @@ inventário.
 
 from dataclasses import dataclass, field
 
-
 @dataclass
 class Produto:
     nome: str
     preco: float
     quantidade: int
-
 
 @dataclass
 class Inventario:

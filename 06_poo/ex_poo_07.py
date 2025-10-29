@@ -12,7 +12,6 @@ Crie alguns quartos diferentes e realize operações de reserva e liberação pa
 funcionalidade.
 """
 
-
 class Quarto:
     def __init__(self, numero: int, tipo: str) -> None:
         self.numero: int = numero

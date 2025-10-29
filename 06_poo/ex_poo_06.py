@@ -12,7 +12,6 @@ Crie alguns alunos e realize operações de matrícula e remoção de disciplina
 testar a funcionalidade.
 """
 
-
 class Aluno:
     def __init__(self, nome: str, idade: int) -> None:
         self.nome: str = nome
